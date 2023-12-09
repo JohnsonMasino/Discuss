@@ -1,0 +1,33 @@
+{% extends 'discuss/main.html' %}
+
+{% block content %}
+<form class="login-first" method="post" action="{% url 'home' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="login-second">
+        <h2>LOGIN</h2>
+        <div class="username-container">
+            <div class="username">
+                <h3>Email:</h3>
+                <input class="" name="email" type="text" placeholder="E.g: masino@masino.com">
+            </div>
+        </div>
+        <div class="password-container">
+            <div class="password">
+                <h3>Password:</h3>
+                <input
+                class=""
+                name="password"
+                type="password"
+                placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+            </div>
+            <button type="submit" class="button" form="{}">Submit</button>
+        </div>
+        <div>
+            <h3>
+                <h2>New user ?<a href="{% url 'signup' %}">  Sing up</a></h2>
+            </h3>
+        </div>
+    </div>
+</form>
+{% endblock content %}

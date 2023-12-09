@@ -1,0 +1,51 @@
+{% extends 'discuss/main.html' %}
+
+{% block content %}
+<form class="login-first" method="post" action="{% url 'home' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="login-second">
+        <h2>SignUp</h2>
+        <div class="username-container">
+            <div class="username">
+                <h3>First Name:</h3>
+                <input class="" name="email" type="text" placeholder="e.g: Johnson">
+            </div>
+            <div class="username">
+                <h3>Last Name:</h3>
+                <input class="" name="email" type="text" placeholder="e.g: Masino">
+            </div>
+            <div class="username">
+                <h3>Email:</h3>
+                <input class="" name="email" type="text" placeholder="e.g: abc@masino.com">
+            </div>
+        </div>
+        <div class="password-container">
+            <div class="password">
+                <h3>Password:</h3>
+                <input
+                class=""
+                name="password"
+                type="password"
+                placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+            </div>
+        </div>
+        <div class="password-container">
+            <div class="password">
+                <h3>Confirm Password:</h3>
+                <input
+                class=""
+                name="password"
+                type="password"
+                placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+            </div>
+            <button type="submit" class="button" form="{% url 'home' %}">Submit</button>
+        </div>
+        <div>
+            <h3>
+                <h2>Have an account ?<a href="{% url 'login' %}">  Login</a></h2>
+            </h3>
+        </div>
+    </div>
+</form>
+{% endblock content %}

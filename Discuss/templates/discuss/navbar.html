@@ -1,0 +1,45 @@
+{% load static %}
+
+<header class="navbar-header">
+    <div class="navbar-header-div">
+        <a href="{% url 'home' %}" class="navbar-logo">
+            <img src="{% static 'images/logo.png' %}" />
+            <h1>Discuss</h1>
+        </a>
+        <form class="navbar-search" method="GET" action="{% url 'home' %}">
+            <label>
+                <svg version="1.1" xmlns="" width="" height="" viewbox="" >
+                    <title>Search</title>
+                    <path d=""></path>
+                </svg>
+                <input name="m" placeholder="search items here" />
+            </label>
+        </form>
+
+        <nav class="navbar-profile">
+            <!--Logged in-->
+            {% if request.user.is_authenticated %}
+            <div class="profile">
+                <a href="{% url 'home' %}">
+                    <div>
+                        <img src="{% static 'user.image' %}" />
+                    </div>
+                    <span>{{request.user.username}}</span>
+                </a>
+            </div>
+            <a href="{% url 'home' %}">Logout</a>
+
+            <!--Not Logged In-->
+            {% else %}
+            <div class="profile">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'images/profile.jpg' %}">      
+                    <span>myusername</span>
+                </a>
+            </div>
+            <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </nav>
+
+    </div>
+</header>
