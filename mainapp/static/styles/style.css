@@ -1,0 +1,187 @@
+@media only screen and (min-width: 1200px) {
+    .body {
+      font-size: 62.5%;
+    }
+  }
+  
+@media only screen and (min-width: 2100px) {
+    .body {
+      font-size: 75%;
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    .navbar-header > .navbar-header-div {
+      width: 5rem;
+    }
+  
+    .navbar-header > .navbar-header-div {
+      gap: 3rem;
+    }
+  }
+
+:root {
+    --text-color-t1: rgb(220, 221, 201);
+    --header-color: rgba(21, 21, 3, 0.878);
+    --background-color: rgba(110, 107, 13, 0.837);
+}
+
+
+
+/*-----------------------
+[[[  Header Section ]]]
+------------------------*/
+.navbar-header {
+    background-color: var(--header-color);
+    padding: 5px;
+}
+.navbar-header > .navbar-header-div {
+    display: flex;
+    gap: 15%;
+    width: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.navbar-logo > img {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+}
+.navbar-logo > h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-color-t1);
+}
+.navbar-profile > a {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--text-color-t1);
+}
+.profile span {
+    color: var(--text-color-t1);
+    font-size: 1rem;
+}
+.profile img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.navbar-profile,
+.navbar-logo {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.navbar-profile {
+    font-size: 1rem;
+    font-weight: 100;
+}
+.navbar-search > label {
+    background-color: var(--background-color);
+    padding: 5px 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 35px;
+}
+.navbar-search svg {
+    fill: var(--background-color);
+    width: 2rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+.navbar-search input {
+    font-size: 15px;
+    width: 25rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color-t1);
+}
+
+
+/*-----------------------
+[[[  Body Section ]]]
+------------------------*/
+
+.header {
+    height: 5rem;
+}
+.body {
+    background-color: var(--background-color);
+}
+
+/*-----------------------
+[[[  Login Section ]]]
+------------------------*/
+
+.login-first {
+    padding: 40px;
+    width: 30rem;
+    border-radius: 4rem;
+    display: flex;
+    align-items: baseline;
+    background-color: var(--header-color);
+}
+.login-second {
+    background-color: var(--background-color);
+    border-radius: 4rem 0rem 4rem 0rem;
+    padding: 1rem;
+    width: 30rem;
+}
+.login-second h3 {
+    color: var(--header-color);
+}
+.login-second input {
+    border: none;
+    color: var(--text-color-t1);
+    background-color: var(--header-color);
+}
+.login-second button {
+    background-color: var(--header-color);
+    color: var(--text-color-t1);
+    padding: 5px;
+    border-radius: 1rem;
+    border-width: 5px;
+    border-color: var(--background-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.username,
+.password {
+    font-size: 20px;
+    width: 25rem;
+    color: var(--text-color-t1);
+}
+.username > input,
+.password > input {
+    font-size: 1rem;
+    width: 36.2rem;
+    border: none;
+    background-color: var(--header-color);
+    color: var(--text-color-t1);
+}
+.username-container,
+.password-container {
+    padding: 1rem;
+    background-color: var(--background-color);
+}
+.submit {
+    background-color: var(--header-color);
+    color: var(--text-color-t1);
+    font-size: 20px;
+}
+
+
