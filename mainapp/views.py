@@ -14,7 +14,7 @@ def Login(request):
 def SignUp(request):
     return render(request, 'mainapp/signup.html')
 
-def RegisterView(APIView):
+class RegisterView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
