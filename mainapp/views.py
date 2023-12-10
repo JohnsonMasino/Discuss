@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from rest_framework.views import APIView
+from . serializers import UserSerializer
+from rest_framework.response import Response
 
 def Home(request):
     context = {}
@@ -10,3 +13,10 @@ def Login(request):
 
 def SignUp(request):
     return render(request, 'mainapp/signup.html')
+
+def RegisterView(APIView):
+    def post(self, request):
+        serializer = UserSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
