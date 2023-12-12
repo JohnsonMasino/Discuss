@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "alexcvzz.vscode-sqlite",
-        "ms-python.python"
+        "ms-python.python",
+        "oleg-shilo.cs-script"
     ]
 }
