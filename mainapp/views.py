@@ -6,9 +6,6 @@ from rest_framework.response import Response
 from . models import User
 import jwt, datetime
 
-def Home(request):
-    context = {}
-    return render(request, 'mainapp/main.html', context)
 
 class LoginView(APIView):
     def post(self, request):
@@ -55,10 +52,7 @@ class UserView(APIView):
 
         return Response(serializer.data)
 
-        
-
-def SignUp(request):
-    return render(request, 'mainapp/signup.html')
+      
 
 class RegisterView(APIView):
     def post(self, request):
